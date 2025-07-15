@@ -21,7 +21,7 @@
             </div>
             <div class="field">
                 <label for="password">Password: </label>
-                <input type="password" name="password" id="password" pattern="[a-zA-Z0-9_.+=]{8,}" title="Make sure your password has letters or numbers and at least eight characters" required>
+                <input type="password" name="password" id="password" minlength="12" pattern="[a-zA-Z0-9_.+=]{8,}" title="Make sure your password has letters or numbers and at least eight characters" required>
             </div>
             <div class="field">
                 <label for="dateofBirth">Date of Birth: </label>
@@ -89,7 +89,7 @@
             <legend>Upload Documents</legend>
             <div class="field">
                 <label for="supporting">Supporting Documents: </label>
-                <input type="file" multiple accept=".pdf,.doc,.docx" name="file" id="supporting">
+                <input type="file" multiple accept=".doc, .docx, .pdf,.jpg,.png">            
             </div>
         </fieldset>
 
