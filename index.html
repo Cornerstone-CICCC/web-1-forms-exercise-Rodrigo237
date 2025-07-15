@@ -9,6 +9,95 @@
 <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
         <!-- FORM FIELDS HERE -->
+         <fieldset>
+            <legend>Personal Information</legend>
+            <div class="name">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" pattern="[a-zA-Z0-9_.+=]{8,}" title="Make sure your password has letters or numbers and at least eight characters" required>
+            </div>
+            <div class="field">
+                <label for="dateofBirth">Date of Birth: </label>
+                <input type="date" name="dateofBirth" id="dateofBirth" min="1920-01-01" max="2025-12-31">
+            </div>
+         </fieldset>
+
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <div class="field">
+            <label for="favoriteColor">Favorite Color: </label>
+            <input type="color" name="favoriteColor" id="favoriteColor" value="#FFFFFF">
+            </div>
+            <div class="field" id="field_hobby">
+            <label for="'hobby'">Hobby: </label>
+            <input type="text" list="hobby">
+                <datalist id="hobby">
+                    <option value="Drawing">Drawing</option>
+                    <option value="Swimming">Swimming</option>
+                    <option value="Dancing">Dancing</option>
+                </datalist>
+            </div>
+            <div>
+                <label for="review">Experience Level: </label>
+                <input type="range" name="review" id="review" min="0" max="5" step=".5">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Preferences</legend>
+            <div>
+                <label for="preferedcontactMethod">Preferred Contact Method: </label>
+                <select name="contact_method" id="contact_method">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="mail">Mail</option>
+                </select>
+            </div>
+            <div>
+               <label for="subscribeNewslette">Subscribe to Newsletter: </label>
+               <input type="checkbox" name="subscribeNewslette" value="subscribeNewslette" id="subscribeNewslette"> 
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <p>Gender:</p>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>More Information</legend>
+            <div class="field">
+                <label for="bio">Bio:</label>
+                <textarea name="bio" id="bio" rows="5"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Upload Documents</legend>
+            <div class="field">
+                <label for="supporting">Supporting Documents: </label>
+                <input type="file" multiple accept=".pdf,.doc,.docx" name="file" id="supporting">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Submission</legend>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+        </fieldset>
     </form>
 </body>
 </html>
